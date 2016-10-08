@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <table class="table table-striped hidden-xs">
+    <thead>
+      <tr>
+        <th class="text-center">#</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Brand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td class="text-center"> {{ product.productId }} </td>
+        <td class="text-center"> {{ product.name }} </td>
+        <td class="text-center"> {{ product.brand.name }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
