@@ -8,7 +8,6 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
 //Components
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
-import { SelectBrandComponent } from './components/brand/select-brand/select-brand.component';
 import { ListProductComponent } from './components/product/list-product/list-product.component';
 import { FormProductComponent } from './components/product/form-product/form-product.component';
 
@@ -23,7 +22,6 @@ import { CreateProduct } from './pages/product/create/create-product';
     HeaderComponent,
     ListProductComponent,
     FormProductComponent,
-    SelectBrandComponent,
     HomePage,
     ReadProduct,
     CreateProduct,
