@@ -6,25 +6,27 @@ import { routing, appRoutingProviders } from './app.routing';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 //Components
-import { HeaderComponent } from './components/shared/header/header.component';
-import { ListProductComponent } from './components/product/list-product/list-product.component';
 import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { SelectBrandComponent } from './components/brand/select-brand/select-brand.component';
+import { ListProductComponent } from './components/product/list-product/list-product.component';
 import { FormProductComponent } from './components/product/form-product/form-product.component';
 
 //Pages
 import { HomePage } from './pages/home/home';
-import { CreateProduct } from './pages/product/create/create-product';
 import { ReadProduct } from './pages/product/read/read-product';
+import { CreateProduct } from './pages/product/create/create-product';
 
 @NgModule({
   declarations: [
+    HomeComponent,
     HeaderComponent,
     ListProductComponent,
-    HomeComponent,
     FormProductComponent,
+    SelectBrandComponent,
     HomePage,
-    CreateProduct,
     ReadProduct,
+    CreateProduct,
   ],
   imports: [
     BrowserModule,
