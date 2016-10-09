@@ -4,11 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-create',
   templateUrl: './create-product.html'
 })
+
 export class CreateProduct implements OnInit {
-
   constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

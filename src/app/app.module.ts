@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 //Components
 import { HeaderComponent } from './components/shared/header/header.component';
 import { ListProductComponent } from './components/product/list-product/list-product.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormProductComponent } from './components/product/form-product/form-product.component';
 
 //Pages
 import { HomePage } from './pages/home/home';
@@ -19,6 +21,7 @@ import { ReadProduct } from './pages/product/read/read-product';
     HeaderComponent,
     ListProductComponent,
     HomeComponent,
+    FormProductComponent,
     HomePage,
     CreateProduct,
     ReadProduct,
@@ -27,7 +30,8 @@ import { ReadProduct } from './pages/product/read/read-product';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [HomePage]
