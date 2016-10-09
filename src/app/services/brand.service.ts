@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import "rxjs/Rx";
 import { Brand } from '../models/brand';
+import "rxjs/Rx";
 
 @Injectable()
 export class BrandService {

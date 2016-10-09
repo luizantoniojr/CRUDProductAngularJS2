@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import "rxjs/Rx";
 import { Product } from '../models/product';
+import { Observable } from 'rxjs/Observable';
+import "rxjs/Rx";
+
 
 @Injectable()
 export class ProductService {
 
   productUrl: string = 'http://localhost:11989/api/v1/public/products/';
+  headers = new Headers();
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.headers.append('Content-Type', 'application/json');
+  }
 
   getProducts() {
     return this.http.get(this.productUrl)
@@ -22,14 +27,10 @@ export class ProductService {
       .catch(this.handleError);
   }
 
-  createProduct(product: Product) {
-    let body = JSON.stringify({ product });
-    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    let options = new RequestOptions({ headers: headers });
-    console.log(body);
-    console.log(headers);
-    console.log(options);
-    this.http.post(this.productUrl, body, options)
+  createProduct(product: Product): Observable<Product> {
+    var requestOptions = new RequestOptions({ headers: this.headers });
+    return this.http.post(this.productUrl, product, requestOptions)
+      .map((response: Response) => response.json())
       .catch(this.handleError);
   }
 

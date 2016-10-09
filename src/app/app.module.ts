@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 //Components
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -29,7 +30,8 @@ import { ReadProduct } from './pages/product/read/read-product';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [HomePage]
