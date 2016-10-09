@@ -15,31 +15,19 @@ export class ProductService {
     this.headers.append('Content-Type', 'application/json');
   }
 
-<<<<<<< HEAD
   public getProducts() {
-=======
-  getProducts() {
->>>>>>> bc7fa5dedd55b9249ef44efc7cfc395a5373042d
     return this.http.get(this.productUrl)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
-<<<<<<< HEAD
   public getProduct(tag: string) {
-=======
-  getProduct(tag: string) {
->>>>>>> bc7fa5dedd55b9249ef44efc7cfc395a5373042d
     return this.http.get(this.productUrl + tag)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
-<<<<<<< HEAD
   public createProduct(product: Product): Observable<Product> {
-=======
-  createProduct(product: Product): Observable<Product> {
->>>>>>> bc7fa5dedd55b9249ef44efc7cfc395a5373042d
     var requestOptions = new RequestOptions({ headers: this.headers });
     return this.http.post(this.productUrl, product, requestOptions)
       .map((response: Response) => response.json())
