@@ -7,18 +7,18 @@ import { ProductService } from '../../../services/product.service';
   templateUrl: './list-product.component.html',
   providers: [ProductService]
 })
-export class ListProductComponent implements OnInit {
 
+export class ListProductComponent implements OnInit {
   products: Product[];
   errorMessage: string;
 
   constructor(private productService: ProductService) { }
   ngOnInit() {
-    this.getCourses();
+    this.getProducts();
   }
 
-  getCourses() {
-    this.productService.getCourses()
+  getProducts() {
+    this.productService.getProducts()
       .subscribe(data => this.products = data, error => console.log(error));
   }
 }

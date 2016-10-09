@@ -8,6 +8,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { ListProductComponent } from './components/product/list-product/list-product.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormProductComponent } from './components/product/form-product/form-product.component';
 
 //Pages
 import { HomePage } from './pages/home/home';
@@ -19,6 +20,7 @@ import { ReadProduct } from './pages/product/read/read-product';
     HeaderComponent,
     ListProductComponent,
     HomeComponent,
+    FormProductComponent,
     HomePage,
     CreateProduct,
     ReadProduct,
