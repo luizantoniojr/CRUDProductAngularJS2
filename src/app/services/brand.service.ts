@@ -9,7 +9,7 @@ export class BrandService {
   constructor(private http: Http) { }
 
   getBrand() {
-    return this.http.get('http://localhost:11989/api/v1/public/brands/')
+    return this.http.get('http://localhost:11989/api/brands/')
       .map(res => res.json())
       .catch(this.handleError);
   }

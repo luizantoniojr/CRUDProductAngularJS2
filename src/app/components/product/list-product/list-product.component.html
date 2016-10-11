@@ -1,10 +1,16 @@
 <div class="container">
+  <div class="pull-right">
+    <a routerLink="/product/create" class="btn btn-sm btn-success" title="Create">
+      <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i>
+    </a>
+  </div>
   <table class="table table-striped hidden-xs">
     <thead>
       <tr>
-        <th class="text-center">#</th>
-        <th class="text-center">Name</th>
-        <th class="text-center">Brand</th>
+        <th class="text-center col-md-1">#</th>
+        <th class="text-center col-md-4">Name</th>
+        <th class="text-center col-md-5">Brand</th>
+        <th class="text-center col-md-2"></th>
       </tr>
     </thead>
     <tbody>
@@ -12,6 +18,14 @@
         <td class="text-center"> {{ product.productId }} </td>
         <td class="text-center"> {{ product.name }} </td>
         <td class="text-center"> {{ product.brand.name }} </td>
+        <td class="text-center">
+          <a routerLink="/product/update/{{ product.productId }}" class="btn btn-sm btn-info" title="Update">
+            <i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a routerLink="/product/delete/{{ product.productId }}" class="btn btn-sm btn-danger" title="Delete">
+            <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>

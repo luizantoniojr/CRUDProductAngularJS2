@@ -8,7 +8,7 @@ import "rxjs/Rx";
 @Injectable()
 export class ProductService {
 
-  productUrl: string = 'http://localhost:11989/api/v1/public/products/';
+  productUrl: string = 'http://localhost:11989/api/products/';
   headers = new Headers();
 
   constructor(private http: Http) {
@@ -22,6 +22,7 @@ export class ProductService {
   }
 
   public getProduct(tag: string) {
+    console.log(tag);
     return this.http.get(this.productUrl + tag)
       .map(res => res.json())
       .catch(this.handleError);
@@ -30,6 +31,13 @@ export class ProductService {
   public createProduct(product: Product): Observable<Product> {
     var requestOptions = new RequestOptions({ headers: this.headers });
     return this.http.post(this.productUrl, product, requestOptions)
+      .map((response: Response) => response.json())
+      .catch(this.handleError);
+  }
+
+  public updateProduct(product: Product): Observable<Product> {
+    var requestOptions = new RequestOptions({ headers: this.headers });
+    return this.http.put(this.productUrl, product, requestOptions)
       .map((response: Response) => response.json())
       .catch(this.handleError);
   }
