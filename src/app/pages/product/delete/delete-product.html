@@ -1,0 +1,11 @@
+<div class="container">
+	<legend>Delete</legend>
+	<p>Do you wish to continue?</p>
+	<app-details-product [productId]="productId"></app-details-product>
+	<div class="row">
+		<div class="col-md-12">
+			<a routerLink="/product/read" class="btn btn-danger">Cancel</a>
+			<button type="button" class="btn btn-success" (click)="confirmDelete()">Confirm</button>
+		</div>
+	</div>
+</div>

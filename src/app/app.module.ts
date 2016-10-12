@@ -10,12 +10,14 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { ListProductComponent } from './components/product/list-product/list-product.component';
 import { FormProductComponent } from './components/product/form-product/form-product.component';
+import { DetailsProductComponent } from './components/product/details-product/details-product.component';
 
 //Pages
 import { HomePage } from './pages/home/home';
 import { ReadProduct } from './pages/product/read/read-product';
 import { CreateProduct } from './pages/product/create/create-product';
 import { UpdateProduct } from './pages/product/update/update-product';
+import { DeleteProduct } from './pages/product/delete/delete-product';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { UpdateProduct } from './pages/product/update/update-product';
     ReadProduct,
     CreateProduct,
     UpdateProduct,
+    DeleteProduct,
+    DetailsProductComponent,
   ],
   imports: [
     BrowserModule,
