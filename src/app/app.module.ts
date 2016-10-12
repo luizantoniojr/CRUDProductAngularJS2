@@ -1,3 +1,4 @@
+//Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -19,18 +20,22 @@ import { CreateProduct } from './pages/product/create/create-product';
 import { UpdateProduct } from './pages/product/update/update-product';
 import { DeleteProduct } from './pages/product/delete/delete-product';
 
+//Pipes
+import { FilterListProduct } from './pipes/product/filter-list-product.pipe';
+
 @NgModule({
   declarations: [
     HomeComponent,
     HeaderComponent,
     ListProductComponent,
     FormProductComponent,
+    DetailsProductComponent,
+    FilterListProduct,
     HomePage,
     ReadProduct,
     CreateProduct,
     UpdateProduct,
     DeleteProduct,
-    DetailsProductComponent,
   ],
   imports: [
     BrowserModule,
